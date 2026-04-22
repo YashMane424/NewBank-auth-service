@@ -1,4 +1,4 @@
-package com.project.NewBank.Service.Login;
+package com.project.authservice.service;
 
 import java.util.HashMap;
 import java.util.HashSet;
