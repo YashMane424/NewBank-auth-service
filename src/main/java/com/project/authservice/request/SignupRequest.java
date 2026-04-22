@@ -1,4 +1,4 @@
-package com.project.NewBank.Security.request;
+package com.project.authservice.request;
 
 import java.util.Set;
 
