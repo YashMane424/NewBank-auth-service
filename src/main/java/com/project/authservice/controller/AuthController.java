@@ -23,7 +23,7 @@ import com.project.NewBank.Service.Security.UserDetailsServiceImpl;
 public class AuthController {
     
     @Autowired
-    LoginService loginService;
+    AuthService authService;
     
     @Autowired
     UserDetailsServiceImpl userDetailsService;
@@ -35,13 +35,13 @@ public class AuthController {
     @PostMapping({"/login"})
     public ResponseEntity<?> login(@RequestBody @Validated LoginRequest loginRequest) {
         System.out.println("LOGIN CONTROLLER HIT");
-        return ResponseEntity.ok(loginService.login(loginRequest));
+        return ResponseEntity.ok(authService.login(loginRequest));
     }
 
     @PostMapping("/signup")
     public ResponseEntity<?> signUp(@RequestBody @Validated SignupRequest signupRequest) {
        
-        return ResponseEntity.created(null).body(loginService.signUp(signupRequest));
+        return ResponseEntity.created(null).body(authService.signUp(signupRequest));
     }
 
         @PostMapping("/refresh")
