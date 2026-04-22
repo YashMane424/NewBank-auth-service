@@ -23,14 +23,14 @@ import com.project.NewBank.model.User;
 import com.project.NewBank.repository.UserRepository;
 
 @Service
-public class LoginService {
+public class AuthService {
 
     private final AuthenticationManager authenticationManager;
     private final JwtService jwtService;
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public LoginService(AuthenticationManager authenticationManager, JwtService jwtService, UserRepository userRepository, PasswordEncoder passwordEncoder) {
+    public AuthService(AuthenticationManager authenticationManager, JwtService jwtService, UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.authenticationManager = authenticationManager;
         this.jwtService = jwtService;
         this.userRepository = userRepository;
@@ -38,7 +38,7 @@ public class LoginService {
     }
 
     public LoginResponse login(LoginRequest loginRequest) {
-        System.out.println("[DEBUG] LoginService: Attempting login for username: " + loginRequest.getUsername());
+        System.out.println("[DEBUG] AuthService: Attempting login for username: " + loginRequest.getUsername());
         UsernamePasswordAuthenticationToken authenticationToken =
                 new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword());
 
@@ -46,11 +46,11 @@ public class LoginService {
             Authentication authentication = authenticationManager.authenticate(authenticationToken);
             Object principal = authentication.getPrincipal();
             if (!(principal instanceof UserDetails)) {
-                System.out.println("[DEBUG] LoginService: Authentication did not return a valid UserDetails principal");
+                System.out.println("[DEBUG] AuthService: Authentication did not return a valid UserDetails principal");
                 throw new RuntimeException("Authentication did not return a valid UserDetails principal");
             }
             UserDetails userDetails = (UserDetails) principal;
-            System.out.println("[DEBUG] LoginService: Authenticated user: " + userDetails.getUsername());
+            System.out.println("[DEBUG] AuthService: Authenticated user: " + userDetails.getUsername());
             String token = jwtService.generateToken(new HashMap<>(), userDetails);
             String refreshToken = jwtService.createRefreshToken(new HashMap<>(), userDetails);
 
@@ -62,7 +62,7 @@ public class LoginService {
             response.setRefreshToken(refreshToken);
             return response;
         } catch (RuntimeException e) {
-            System.out.println("[DEBUG] LoginService: Authentication failed for username: " + loginRequest.getUsername() + ", reason: " + e.getMessage());
+            System.out.println("[DEBUG] AuthService: Authentication failed for username: " + loginRequest.getUsername() + ", reason: " + e.getMessage());
             throw e;
         }
     }
