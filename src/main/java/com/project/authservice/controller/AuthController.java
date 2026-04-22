@@ -1,4 +1,4 @@
-package com.project.NewBank.controller;
+package com.project.authservice.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.project.NewBank.Security.request.LoginRequest;
 import com.project.NewBank.Security.request.SignupRequest;
-import com.project.NewBank.Service.Login.LoginService;
+import com.project.authservice.service.AuthService;
 import com.project.NewBank.Service.Security.JwtService;
 import com.project.NewBank.Service.Security.UserDetailsServiceImpl;
 
