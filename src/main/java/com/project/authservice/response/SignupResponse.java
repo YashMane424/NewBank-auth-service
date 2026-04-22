@@ -1,4 +1,4 @@
-package com.project.NewBank.Security.Response;
+package com.project.authservice.response;
 
 import java.util.Set;
 
