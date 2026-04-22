@@ -1,4 +1,4 @@
-package com.project.NewBank.Service.Security;
+package com.project.authservice.service;
 
 import java.util.Collection;
 import java.util.List;
