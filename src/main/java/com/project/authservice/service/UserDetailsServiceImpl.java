@@ -1,4 +1,4 @@
-package com.project.NewBank.Service.Security;
+package com.project.authservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
