@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.NewBank.Security.request.LoginRequest;
-import com.project.NewBank.Security.request.SignupRequest;
+import com.project.authservice.request.LoginRequest;
+import com.project.authservice.request.SignupRequest;
 import com.project.authservice.service.AuthService;
-import com.project.NewBank.Service.Security.JwtService;
-import com.project.NewBank.Service.Security.UserDetailsServiceImpl;
+import com.project.authservice.service.JwtService;
+import com.project.authservice.service.UserDetailsServiceImpl;
 
 @RestController
 @RequestMapping("/api/auth")

@@ -1,6 +1,6 @@
-package com.project.NewBank.model;
+package com.project.authservice.model;
 
-import com.project.NewBank.model.Enum.RoleName;
+import com.project.authservice.model.Enum.RoleName;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;

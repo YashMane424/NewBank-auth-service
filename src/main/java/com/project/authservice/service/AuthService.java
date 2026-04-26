@@ -12,18 +12,20 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.project.NewBank.Security.Response.LoginResponse;
-import com.project.NewBank.Security.Response.SignupResponse;
-import com.project.NewBank.Security.request.LoginRequest;
-import com.project.NewBank.Security.request.SignupRequest;
-import com.project.NewBank.Service.Security.JwtService;
-import com.project.NewBank.model.Enum.RoleName;
-import com.project.NewBank.model.Role;
-import com.project.NewBank.model.User;
-import com.project.NewBank.repository.UserRepository;
+import com.project.authservice.service.AuthService;
+import com.project.authservice.response.SignupResponse;
+import com.project.authservice.request.LoginRequest;
+import com.project.authservice.request.SignupRequest;
+import com.project.authservice.service.JwtService;
+import com.project.authservice.response.LoginResponse;
+import com.project.authservice.model.Enum.RoleName;
+import com.project.authservice.model.Role;
+import com.project.authservice.model.User;
+import com.project.authservice.repository.UserRepository;
 
 @Service
 public class AuthService {
+
 
     private final AuthenticationManager authenticationManager;
     private final JwtService jwtService;

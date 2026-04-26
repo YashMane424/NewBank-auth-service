@@ -74,10 +74,10 @@
         </dependency>
 
         <!-- Lombok -->
-        <dependency>
+       <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Test -->

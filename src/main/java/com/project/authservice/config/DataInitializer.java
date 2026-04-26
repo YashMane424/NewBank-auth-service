@@ -2,7 +2,7 @@ package com.project.authservice.config;
 
 import com.project.authservice.model.Role;
 import com.project.authservice.model.User;
-import com.project.authservice.model.enums.RoleName;
+import com.project.authservice.model.Enum.RoleName;
 import com.project.authservice.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
