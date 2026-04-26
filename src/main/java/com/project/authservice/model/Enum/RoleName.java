@@ -1,4 +1,4 @@
-package com.project.NewBank.model.Enum;
+package com.project.authservice.model.Enum;
 
 public enum RoleName {
     ROLE_USER,

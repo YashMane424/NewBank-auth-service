@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
-import com.project.NewBank.model.User;
+import com.project.authservice.model.User;
 
 public class UserDetailsImpl implements org.springframework.security.core.userdetails.UserDetails {
 

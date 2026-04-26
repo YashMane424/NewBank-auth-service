@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.project.NewBank.model.User;
-import com.project.NewBank.repository.UserRepository;
+import com.project.authservice.model.User;
+import com.project.authservice.repository.UserRepository;
 
 import jakarta.transaction.Transactional;
 
